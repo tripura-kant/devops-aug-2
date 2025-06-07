@@ -25,5 +25,7 @@ replica
 SET Global slow_query_log = 'ON';
 SET Global LOG_QUERY_TIME = 'ON';
 
+thanks
+
 mysqldumplow
 
