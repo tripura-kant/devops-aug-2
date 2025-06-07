@@ -9,4 +9,3 @@ DATE=$(date +"%Y%m%d")
 sudo mysqldump $DATABASE > $BACKUP_DIR/db_backup_$DATE.sql
 Print message
 echo "Backup for $DATABASE completed on $DATE"
-
