@@ -1,0 +1,29 @@
+SELECT * FROM inventory where inventory_id=1;
+
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+
+SELECT product_name, price FROM products WHERE category = 'Electronics';
+
+
+CREATE INDEX idx_product_id_name ON products (product_id, product_name);
+EXPLAIN ANALYZE SELECT product_name, price FROM products WHERE category = 'Electronics';
+CREATE INDEX idx_order_id_order_date ON orders (order_id, order_date);
+
+MAINTAINANCE TASK IN MYSQL
+
+Regular Backups
+
+Logical backups and Physical backups
+
+mysql dump -u username -p password DB_NAME > BKP.sql
+
+Monitoring in DB:
+
+Query performance
+replica
+
+SET Global slow_query_log = 'ON';
+SET Global LOG_QUERY_TIME = 'ON';
+
+mysqldumplow
+

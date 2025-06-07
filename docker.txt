@@ -1,0 +1,70 @@
+## Docker file creation
+
+FROM --> pull from base image
+
+FROM scratch building from scratch --> TO CREATE IMAGE FROM SCRATCH
+
+docker inspect <container-id>
+
+How do we build efficient build images in docker?
+Reduce size of docker images
+cleanup of docker images
+install
+use
+remove/uninstall
+
+flattering of docker images
+one image with 100 layer
+just run the container
+export into flattered images
+
+docker swarm
+
+
+docker swarm init
+docker service scale myservice=6
+docker node ls
+cd /var/lib/docker
+
+
+
+docker swarm mode
+
+docker swarm update --auto-lock=true
+docker swarm unlock
+
+
+   0 vi Dockerfile
+   1 docker build -t nginx-static-site .
+   2 docker ps
+   3 docker run -d --name nginx-static -p 8080:80 nginx-static-site
+   4 curl http://localhost:8080
+   5 history
+
+
+#create a log file and based on that scale the docker swarm services
+
+docker exec -it <id> /bin/bash
+
+docker-compose up -- > to start all container
+
+
+docker volume create my_volume
+docker volume ls
+docker run -d -v my
+
+dokcer run -it --name demo-container -v my-volume:/data alpine sh
+
+Difference in docker volume and bind mounts in docker ?
+docker volume help in fetching or accessing data within the containers
+bind mounts helps in mounting local file to all the container working
+
+Storage Drivers
+
+overlay2 default storge driver
+
+AUFS
+
+nfs network file system
+
+
