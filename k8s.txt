@@ -1,0 +1,5 @@
+namespace
+
+
+Type of namespace:
+default namespace
